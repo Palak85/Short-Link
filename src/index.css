@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  
+  /* Standard color names mapped exactly to user's provided colors */
+  --color-primary: #b60055;
+  --color-primary-container: #e4006c;
+  --color-primary-fixed: #ffd9e0;
+  --color-primary-fixed-dim: #ffb1c3;
+  --color-on-primary-fixed: #3f0019;
+  --color-on-primary-fixed-variant: #8f0041;
+  
+  --color-secondary: #904d00;
+  --color-secondary-container: #fd8b00;
+  --color-on-secondary-container: #603100;
+  --color-secondary-fixed: #ffdcc3;
+  --color-secondary-fixed-dim: #ffb77d;
+  
+  --color-tertiary: #7000ff;
+  --color-tertiary-container: #874cff;
+  --color-tertiary-fixed: #e9ddff;
+  --color-tertiary-fixed-dim: #d1bcff;
+  --color-on-tertiary-fixed: #23005b;
+  --color-on-tertiary-fixed-variant: #5700c9;
+
+  --color-background: #fef9ef;
+  --color-on-background: #1d1c16;
+  --color-surface: #fef9ef;
+  --color-on-surface: #1d1c16;
+  
+  --color-surface-container-low: #f8f3e9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container: #f2ede4;
+  --color-surface-container-high: #ece8de;
+  --color-surface-container-highest: #e7e2d8;
+  
+  --color-outline: #906e75;
+  --color-outline-variant: #e5bcc4;
+  
+  /* Mapped color variants for existing component references */
+  --color-primary-50: #ffd9e0;
+  --color-primary-100: #ffb1c3;
+  --color-primary-500: #b60055;
+  --color-primary-600: #8f0041;
+  --color-primary-700: #3f0019;
+  --color-primary-900: #1d1c16;
+  
+  --color-warm-50: #ffffff;
+  --color-warm-100: #fef9ef;
+  --color-warm-200: #f2ede4;
+  --color-warm-300: #ece8de;
+  --color-warm-900: #1d1c16;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Custom shadows matching user's custom CSS classes */
+.sunset-glow {
+  box-shadow: 0 10px 30px -10px rgba(187, 0, 88, 0.12);
+}
+
+.sunset-glow-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.sunset-glow-hover:hover {
+  box-shadow: 0 20px 40px -15px rgba(187, 0, 88, 0.2);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.pill-shape {
+  border-radius: 9999px !important;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-warm-200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
